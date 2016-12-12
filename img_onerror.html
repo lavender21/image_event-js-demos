@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>image的onerror事件</title>
+</head>
+<body>
+	<div>
+		<h1>image的onerror事件 demo1写在元素内实现 </h1>
+		<img  src="http://tupian.36992.com/2013/05/14/1aa.jpg" onerror="javascript:this.src='http://tupian.36992.com/2013/05/14/5.jpg'"/>
+	</div>
+	<div>
+		<h1>image的onerror事件 demo2写在js文件中实现</h1>
+		<img id="img_box" src="http://tupian.36992.com/2013/05/14/1aa.jpg"/>
+	</div>
+	<script type="text/javascript">
+		var obj = document.getElementById('img_box');
+		obj.onerror = function(){
+			this.src="http://tupian.36992.com/2013/05/14/5.jpg";
+		};
+	</script>
+</body>
+</html>
